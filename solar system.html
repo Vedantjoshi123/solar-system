@@ -1,0 +1,361 @@
+<html>
+
+<head>
+    <title>
+        solar system
+    </title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            background-image: url(1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+        }
+
+        .sun {
+            width: 400px;
+            height: 400px;
+            border-radius: 400px;
+            background-image: linear-gradient(-20deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);
+            border: 2px solid rgba(245, 92, 46, 0.959);
+            position: relative;
+            top: 200px;
+            left: 550px;
+            background: url(sun.jpg);
+            /* background-size: cover; */
+            background-position-x: 0px;
+            background-position-y: -100px;
+            box-shadow: inset 0 0 20px #ff5722,
+                0 0 60px #ff5722;
+            animation: Rotation 5s linear infinite;
+            background-repeat: no-repeat;
+        }
+
+
+        /* @keyframes sun1{
+                0%{background-image: linear-gradient(-20deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                6%{ background-image: linear-gradient(-37.14deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                12%{ background-image: linear-gradient(-54.28deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                18%{ background-image: linear-gradient(-71.42deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                24%{ background-image: linear-gradient(-88.56deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                30%{ background-image: linear-gradient(-105.7deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                34%{ background-image: linear-gradient(-122.84deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                36%{ background-image: linear-gradient(-139.98deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                40%{ background-image: linear-gradient(-157.12deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                44%{ background-image: linear-gradient(-174.26deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                48%{ background-image: linear-gradient(-191.4deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                50%{ background-image: linear-gradient(-208.54deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                55%{ background-image: linear-gradient(-225.68deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                60%{ background-image: linear-gradient(-242.82deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                65%{ background-image: linear-gradient(-259.96deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                70%{ background-image: linear-gradient(-277.1deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                75%{ background-image: linear-gradient(-294.24deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                80%{ background-image: linear-gradient(-311.38deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                85%{ background-image: linear-gradient(-328.52deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                90%{ background-image: linear-gradient(-345.66deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                95%{ background-image: linear-gradient(2.8deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+                100%{ background-image: linear-gradient(19.94deg, rgba(221, 221, 32, 0.884), rgba(248, 104, 37, 0.795), red);}
+            } */
+        /* .earth {
+            width: 70px;
+            height: 70px;
+            border-radius: 60px;
+            position: relative;
+            top: -30px;
+            left: 305px;
+            box-shadow: 5px 5px 10px rgba(5, 1, 1, 0.658);
+            background-image: url(earth.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: earth;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        } */
+        .Earth {
+            width: 70px;
+            height: 70px;
+            border-radius: 60px;
+            position: relative;
+            top: -30px;
+            left: 305px;
+            background: url(earth2.jpeg);
+            background-size: cover;
+            background-position-x: 0%;
+            /* background-position-y: 0px; */
+            box-shadow: inset 0 0 15px #f3f0e1,
+                0 0 20px #e9e3c8;
+            animation: Earth 1s linear infinite,
+                earth 6s linear infinite;
+            /* transform: rotate(0deg) translateY(0) translateX(0px); */
+        }
+        .revolution {
+            width: 800px;
+            height: 800px;
+            border-radius: 800px;
+            border: 5px groove rgb(255, 255, 255);
+            position: relative;
+            top: -250px;
+            left: -200px;
+            transform: skewX(-25deg) rotateX(60deg);
+        }
+        .revolution2 {
+            width: 120px;
+            height: 120px;
+            border-radius: 200px;
+            border: 3px groove rgb(255, 255, 255);
+            position: relative;
+            top: -48px;
+            left: -35px;
+            transform: skewX(-35deg) rotateX(50deg);
+        } 
+        .moon {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-image: url(moon.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            top: -163px;
+                left: 25px;
+            animation: moon 0.7s linear infinite;
+            box-shadow: inset 0 0 8px #b9b8b5,
+                0 0 10px #c1c1bf;
+        }
+
+        @keyframes moon{
+            0% {
+                top: -160;
+                left: 0;
+            }
+
+            10% {
+            top: -145;
+            left: -25;
+            }
+
+            20% {
+                top: -104;
+            left: -50;
+            }
+
+            30% {
+                top: -87;
+            left: -20;
+            }
+
+            40% {
+                top: -90;
+            left: 10;
+            }
+
+            50% {
+                top: -105;
+            left: 50;
+            }
+
+            60% {
+                top: -135;
+            left: 80;
+            }
+
+            70% {
+                top: -163;
+            left: 58;
+            }
+
+            80% {
+                top: -163;
+            left: 35;
+            }
+
+            90% {
+                top: -163px;
+                left: 25px;
+            }
+
+            100% {
+                top: -160px;
+                left: 0px;
+            }
+
+        }
+
+
+        @keyframes Earth{
+
+            /* from {
+                transform: rotate(0deg) translateY(0) translateX(0px);
+            }
+
+            to {
+                transform: rotate(0deg) translateY(0) translateX(300px);
+            } */
+            0% {
+                background-position-x: 0%;
+                /* background-position-y: 0px; */
+            }
+
+            100% {
+                background-position-x: 200%;
+                /* background-position-y: -100px; */
+            }
+
+        }
+
+        @keyframes Rotation {
+
+            0% {
+                background-position-x: 0px;
+                background-position-y: -100px;
+            }
+
+            100% {
+                background-position-x: -100px;
+                background-position-y: 0px;
+            }
+        }
+
+        @keyframes earth{
+            0% {
+                top: 50px;
+                left: 350;
+            }
+
+            6% {
+                top: 105px;
+                left: 500px;
+            }
+
+            12% {
+                top: 115px;
+                left: 650px;
+            }
+
+            18% {
+                top: 100;
+                left: 800;
+            }
+
+            24% {
+                top: 60;
+                left: 950;
+            }
+
+            30% {
+                top: 10px;
+                left: 1030px;
+            }
+
+            34% {
+                top: -40px;
+                left: 1100px;
+            }
+
+            36% {
+                top: -110px;
+                left: 1125px;
+            }
+
+            40% {
+                top: -170px;
+                left: 1125px;
+            }
+
+            44% {
+                top: -220px;
+                left: 1080px;
+            }
+
+            48% {
+                top: -260px;
+                left: 1000px
+            }
+
+            50% {
+                top: -270px;
+                left: 980px;
+            }
+
+            55% {
+                top: -280px;
+                left: 890px;
+            }
+
+            60% {
+                top: -290px;
+                left: 790px;
+            }
+
+            65% {
+                top: -280px;
+                left: 650px;
+            }
+
+            70% {
+                top: -230px;
+                left: 500px;
+            }
+
+            75% {
+                top: -200px;
+                left: 435px;
+            }
+
+            80% {
+                top: -150px;
+                left: 380px;
+            }
+
+            85% {
+                top: -120px;
+                left: 340px;
+            }
+
+            90% {
+                top: -90px;
+                left: 315px;
+            }
+
+            95% {
+                top: -30px;
+                left: 305px;
+            }
+
+            100% {
+                top: 70px;
+                left: 390px;
+            }
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="background">
+            <div class="sun">
+                <div class="revolution">
+                </div>
+            </div>
+            <div class="Earth">
+                <div class="revolution2"></div>
+                    <div class="moon">
+                    </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
